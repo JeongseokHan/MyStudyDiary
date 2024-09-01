@@ -1,0 +1,150 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* 전체 페이지의 가로 크기를 1440px로 제한 */
+.container {
+    max-width: 1440px; /* 최대 너비를 1440px로 설정 */
+    margin: 0 auto; /* 중앙 정렬 */
+    padding: 0 15px; /* 양 옆에 약간의 패딩 */
+}
+
+header {
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; /* 양쪽 끝에 아이템 배치 */
+    align-items: center; /* 세로 가운데 정렬 */
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li.left-item {
+    margin-right: auto; /* 왼쪽 그룹을 왼쪽으로 밀기 */
+}
+
+header nav ul li.right-item {
+    margin-left: auto; /* 오른쪽 그룹을 오른쪽으로 밀기 */
+}
+
+header nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li a img {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.banner {
+    text-align: center;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+.main-features {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.main-features .feature {
+    text-align: center;
+}
+
+.community {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 페이지 안쪽 컨텐츠가 container의 너비를 따르도록 설정 */
+.community, .main-features, header {
+    width: 100%;
+}
+
+/* 드롭다운 컨텐츠 숨김 */
+.login-content {
+    display: none; /* 기본적으로 숨김 */
+    position: absolute; /* 절대 위치로 설정 */
+    right: 0; /* 오른쪽 정렬 */
+    background-color: #ffffff; /* 배경색 */
+    min-width: 160px; /* 최소 너비 */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* 그림자 */
+    z-index: 1010; /* 오버레이보다 위에 표시 */
+    list-style: none; /* 리스트 스타일 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+    margin: 0; /* 기본 마진 제거 */
+}
+
+/* 드롭다운 메뉴 항목 스타일 */
+.login-content li {
+    list-style: none; /* 기본 리스트 스타일 제거 */
+}
+
+.login-content li a {
+    color: black; /* 텍스트 색상 */
+    padding: 12px 16px; /* 패딩 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+    display: block; /* 블록 디스플레이 */
+}
+
+/* 드롭다운 메뉴 항목에 마우스를 올렸을 때의 효과 */
+.login-content li a:hover {
+    background-color: #f1f1f1; /* 배경색 변경 */
+}
+
+/* 드롭다운 메뉴를 보여주는 활성화 상태 */
+.show {
+    display: block; /* 드롭다운을 표시 */
+}
+
+/* 오른쪽 아이템을 오른쪽에 정렬 */
+.right-item {
+    position: relative; /* 드롭다운 메뉴 위치 조정을 위해 상대 위치 */
+}
+
+/* 오른쪽 아이템 내 링크 스타일 */
+#login-btn {
+    display: flex; /* Flexbox로 아이템 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+}
+
+/* 배경 오버레이 기본 상태 (숨김) */
+.overlay {
+    display: none; /* 기본적으로 숨김 */
+    position: fixed; /* 화면 전체에 고정 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 어두운 배경 */
+    z-index: 1000; /* 드롭다운 메뉴보다 아래에 표시 */
+    pointer-events: none; /* 클릭 이벤트 무시 */
+}
+
+/* 오버레이 활성화 상태 */
+.overlay.show {
+    display: block; /* 오버레이를 표시 */
+    pointer-events: auto; /* 클릭 이벤트 허용 */
+}
