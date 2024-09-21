@@ -8,8 +8,12 @@ import java.util.List;
 @AllArgsConstructor
 @Data
 public class QuizDTO {
-    private String model;
-    private List<Message> messages;
+    @AllArgsConstructor
+    @Data
+    public static class Body {
+        private String model;
+        private List<Message> messages;
+    }
 
     @AllArgsConstructor
     @Data
