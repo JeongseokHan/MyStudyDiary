@@ -19,11 +19,11 @@
                 <!-- 로고를 왼쪽에 배치 -->
                 <li class="left-item"><a href="#"><img src="/images/mainlogo.png" alt="main logo"></a></li>
                 <!-- 나머지 메뉴 항목을 가운데 정렬 -->
-                <li><a href="#">요약하기</a></li>
-                <li><a href="#">문제풀기</a></li>
-                <li><a href="#">일기쓰기</a></li>
-                <li><a href="#">퀴즈내기</a></li>
-                <li><a href="#">커뮤니티</a></li>
+                <li class = "menu"><a href="#">요약하기</a></li>
+                <li class = "menu"><a href="#">문제풀기</a></li>
+                <li class = "menu"><a href="#">일기쓰기</a></li>
+                <li class = "menu"><a href="#">퀴즈내기</a></li>
+                <li class = "menu"><a href="#">커뮤니티</a></li>
                 <!-- 로그인을 오른쪽에 배치 -->
                 <li class="right-item">
                     <a href="index.jsp" id="login-btn">

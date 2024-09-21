@@ -12,6 +12,10 @@ body {
     padding: 0 15px; /* 양 옆에 약간의 패딩 */
 }
 
+.menu {
+    font-size : 20px;
+}
+
 header {
     background-color: #ffffff;
     color: #ffffff;
